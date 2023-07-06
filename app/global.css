@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {  
+    :root {
+        --margin-mobile: 1rem;
+        --margin-tablet: 4rem;
+        --margin-desktop: 8rem;
+        --max-width-content: 1110px;           
+        
+        --neutral-1: #ffffff;
+        --neutral-2: #b6b6b6;
+        --neutral-3: #858585;
+        --neutral-4: #3b3b3b;
+        --neutral-5: #000000;
+
+        --color-1: #XXXXX;
+        --color-2: #XXXXX;
+        --color-3: #XXXXX;
+        --color-4: #XXXXX;
+        --color-5: #XXXXX;
+        --color-6: #XXXXX;
+        --color-7: #XXXXX;
+        --color-8: #XXXXX;
+        --color-9: #XXXXX;
+        
+        --fw-1: XXXXX;
+        --fw-2: XXXXX;
+        --fw-3: XXXXX;
+        
+        --color-default: XXXXX;
+        --color-bg-default: XXXXX;
+        --fs-default: XXXXX;
+        --fw-default: XXXXX;  
+    }
+
+    /* ------------------------------------------ */
+
+    body {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        background-color: var(--color-bg-default);
+        color: var(--color-default);
+        font-family: var(--font-primary);
+    }
+
+    main {
+        background-color: var(--neutral-3);
+
+
+    }
+
+    header {
+        background-color: var(--neutral-4);
+    }
+    footer {
+        background-color: var(--neutral-4);
+    }
+    h1 {
+        color: XXXXX;
+        font-family: var(--font-secondary);
+        font-weight: var(--fw-2);
+        font-size: XXXXX;
+        @apply md:text-[XXXXX]  lg:text-[XXXXX];
+    }
+    h2 {
+        color: XXXXX;
+        font-family: var(--font-secondary);
+        font-weight: var(--fw-2);
+        font-size: XXXXX;
+        @apply md:text-[XXXXX]  lg:text-[XXXXX];
+    }
+    h3 {
+        color: XXXXX;
+        font-family: var(--font-secondary);
+        font-weight: var(--fw-2);
+        font-size: XXXXX;
+        @apply md:text-[XXXXX]  lg:text-[XXXXX];
+    }
+    h4 {
+        color: XXXXX;
+        font-family: var(--font-secondary);
+        font-weight: var(--fw-2);
+        font-size: XXXXX;
+        @apply md:text-[XXXXX]  lg:text-[XXXXX];
+    }
+    p {
+        color: XXXXX;
+        font-weight: var(--fw-1);
+        font-size: XXXXX;
+        @apply md:text-[XXXXX]  lg:text-[XXXXX];
+    }
+    a {
+        color: XXXXX;
+        font-weight: var(--fw-1);
+        @apply md:text-[XXXXX]  lg:text-[XXXXX];
+    }
+    svg {
+        fill: var(--neutral-1);
+    }
+
+/* -------------------------------------------- */
+
+    picture {
+        display: block;
+    }    
+    input:-webkit-autofill, input:-webkit-autofill:focus {
+        box-shadow: 0 0 0 100px var(--neutral-3) inset;
+        -webkit-text-fill-color: var(--neutral-1);
+    }
+}
+
+/* ---------------------------------------------- */
+
+@layer components {
+    .ButtonBordered {
+        color: var(--color-2);
+        background-color: var(--neutral-1);
+        border: 1px solid var(--color-2);
+        border-radius: 50px;
+        padding: .3rem 1rem;
+    }
+        
+    .ButtonBordered:hover {
+        background-color: var(--color-2);
+        color: var(--neutral-1);
+    }
+    
+    .HoverStyle1 {
+        transform: scale(1.1);
+        transition: all .1s ease-in-out;
+        color: var(--neutral-2);
+        fill: var(--neutral-2);
+    }
+    
+    .LinkStyle1 {
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--primary);
+    }
+}
+    
+/* ----------------------------------------------- */
+
+@layer utilities {
+
+    /* .DefaultMargins {
+        @apply mx-[--margin-mobile]  
+        md:mx-[--margin-tablet]
+        lg:FixedToAutoMargin 
+        max-w-[--max-width-body];    
+    } */
+
+    .ExtendBackground {
+        box-shadow: 0 0 0 100vmax var(--neutral-3);
+        clip-path: inset(0 -100vmax);
+    }
+    
+    .FixedToAutoMargin {
+        width: min(var(--max-width-body), 100% - calc(var(--margin-desktop) * 2));
+        margin-inline: auto;
+    }
+    .FlexCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .FlexBetween {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .SplitCenter {
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        @apply md:grid-cols-2;
+    }
+      
+    /* TOGGLE SWITCH */
+    
+    #input:checked ~ #off {
+        display: none;   
+    }
+    #input:checked ~ #on {   
+        display: contents;
+    }
+    
+    @media (max-width: 650px) {
+        #label:has(#input) + #childContainer {
+        
+            background-color: var(--neutral-3);
+            display: grid;
+            position: absolute;
+            translate: 100%;
+            top: 150px;
+            right: 0;
+            padding-inline: 50px;
+            padding-block: 50px;
+            transition: translate .1s ease-out;
+        }
+        
+        #label:has(#input:checked) + #childContainer {
+        /* * */
+        translate: 0;
+        transition: translate .1s ease-out;
+        }
+    
+    }
+}
+
+
+
+
+
+
+
+
+
