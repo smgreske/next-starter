@@ -2,18 +2,16 @@ import  Main  from 'project/Main'
 
 //////////////////////////////////////////////////
 
-export default function Home() {
+export default function TestPage() {
 
   const mainStyles = {
-    main:`
-    `,
-    mainContainer:`
-    `,
+    main:`  `,
+    mainContainer:`  `,
   }
 
     return (
         <Main styles={mainStyles}>    
-          <h1>Hello</h1>
+          
         </Main>
     )
 }

@@ -1,19 +1,19 @@
-import  Main  from 'project/Main'
+
 
 //////////////////////////////////////////////////
 
 export default function Home() {
 
-  const mainStyles = {
-    main:`
-    `,
-    mainContainer:`
-    `,
-  }
-
     return (
-        <Main styles={mainStyles}>    
-          <h1>Hello</h1>
-        </Main>
+        <main>    
+          <a href='/test-page'>
+            Test Page
+          </a>
+          <br/>
+          <br/>
+          <a href='/project'>
+            Project
+          </a>
+        </main>
     )
 }

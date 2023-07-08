@@ -2,19 +2,18 @@
 
 export default function Header({ fixed, styles, children }) {
     
-  const header = styles.header +    
-    (fixed && ' fixed w-full top-0')
+  const header = styles.header +
+    ' FlexCenter '
 
-  const container = styles.container +
+  const headerContainer = styles.headerContainer +
     ` mx-[--margin-mobile]  
       md:mx-[--margin-tablet]  
       lg:mx-[--margin-desktop]  
-      max-w-[--max-width-content]
-    `
+      max-w-[--max-width-content] `
 
     return (
       <header className={header}>
-        <div className={container}>       
+        <div className={headerContainer}>       
           {children}
         </div>
       </header>

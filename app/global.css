@@ -4,100 +4,101 @@
 
 @layer base {  
     :root {
-        --margin-mobile: 1rem;
-        --margin-tablet: 4rem;
-        --margin-desktop: 8rem;
-        --max-width-content: 1110px;           
-        
-        --neutral-1: #ffffff;
-        --neutral-2: #b6b6b6;
-        --neutral-3: #858585;
-        --neutral-4: #3b3b3b;
-        --neutral-5: #000000;
+        --max-width-content: 1110px;        
 
-        --color-1: #XXXXX;
-        --color-2: #XXXXX;
-        --color-3: #XXXXX;
-        --color-4: #XXXXX;
-        --color-5: #XXXXX;
-        --color-6: #XXXXX;
-        --color-7: #XXXXX;
-        --color-8: #XXXXX;
-        --color-9: #XXXXX;
-        
+        --margin-mobile: 1rem;
+        --margin-tablet: 2rem;
+        --margin-desktop: 4rem;
+
+        --clr-bg-1: #XXXXX;
+        --clr-bg-2: #XXXXX;
+        --clr-bg-3: #XXXXX;
+        --clr-bg-4: #XXXXX;
+
+        --clr-1: #XXXXX;
+        --clr-2: #XXXXX;
+        --clr-3: #XXXXX;
+        --clr-4: #XXXXX;
+        --clr-5: #XXXXX;
+        --clr-6: #XXXXX;
+        --clr-7: #XXXXX;
+        --clr-8: #XXXXX;
+
         --fw-1: XXXXX;
         --fw-2: XXXXX;
         --fw-3: XXXXX;
-        
-        --color-default: XXXXX;
-        --color-bg-default: XXXXX;
+
+/* ---------------------------------------------------- */
+
         --fs-default: XXXXX;
-        --fw-default: XXXXX;  
-    }
+        --fs-default-md: XXXXX;
+        --fs-default-lg: XXXXX;
 
-    /* ------------------------------------------ */
-
+        --fw-default: XXXXX;
+        --fw-default-h: XXXXX;
+        
+/* -------------------------------------------------- */
+}
+        
     body {
         scroll-behavior: smooth;
         overflow-x: hidden;
-        background-color: var(--color-bg-default);
-        color: var(--color-default);
         font-family: var(--font-primary);
-    }
-
-    main {
-        background-color: var(--neutral-3);
-
-
+        font-size: var(--fs-default);
+        font-weight: var(--fw-default);
+        @apply md:text-[--fs-default-md] lg:text-[--fs-default-lg];
     }
 
     header {
-        background-color: var(--neutral-4);
+        color: XXXXX;
+        background-color: XXXXX;
+    }
+    main {
+        color: XXXXX;
+        background-color: XXXXX;
     }
     footer {
-        background-color: var(--neutral-4);
+        color: XXXXX;
+        background-color: XXXXX;
     }
     h1 {
         color: XXXXX;
         font-family: var(--font-secondary);
-        font-weight: var(--fw-2);
         font-size: XXXXX;
-        @apply md:text-[XXXXX]  lg:text-[XXXXX];
+        @apply 
+            md:text-[XXXXX]  
+            lg:text-[XXXXX]
+        ;
     }
     h2 {
         color: XXXXX;
         font-family: var(--font-secondary);
-        font-weight: var(--fw-2);
         font-size: XXXXX;
-        @apply md:text-[XXXXX]  lg:text-[XXXXX];
+        @apply 
+            md:text-[XXXXX]  
+            lg:text-[XXXXX]
+        ;
     }
     h3 {
         color: XXXXX;
         font-family: var(--font-secondary);
-        font-weight: var(--fw-2);
         font-size: XXXXX;
-        @apply md:text-[XXXXX]  lg:text-[XXXXX];
+        @apply 
+            md:text-[XXXXX]  
+            lg:text-[XXXXX]
+        ;
     }
     h4 {
         color: XXXXX;
         font-family: var(--font-secondary);
-        font-weight: var(--fw-2);
-        font-size: XXXXX;
-        @apply md:text-[XXXXX]  lg:text-[XXXXX];
-    }
-    p {
-        color: XXXXX;
-        font-weight: var(--fw-1);
-        font-size: XXXXX;
-        @apply md:text-[XXXXX]  lg:text-[XXXXX];
+        font-size: XXXXX; 
+        @apply 
+            md:text-[XXXXX]  
+            lg:text-[XXXXX]
+        ;
     }
     a {
-        color: XXXXX;
-        font-weight: var(--fw-1);
-        @apply md:text-[XXXXX]  lg:text-[XXXXX];
-    }
-    svg {
-        fill: var(--neutral-1);
+        @apply hover:text-[XXXXX];
     }
 
 /* -------------------------------------------- */
@@ -144,12 +145,11 @@
 
 @layer utilities {
 
-    /* .DefaultMargins {
-        @apply mx-[--margin-mobile]  
-        md:mx-[--margin-tablet]
-        lg:FixedToAutoMargin 
-        max-w-[--max-width-body];    
-    } */
+    .FixedHeader {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 
     .ExtendBackground {
         box-shadow: 0 0 0 100vmax var(--neutral-3);

@@ -1,17 +1,19 @@
 
 
-export default function Header({ styles, children }) {
+export default function Footer({ styles, children }) {
 
-  const container = styles.container +
+  const footer = styles.footer +
+  ' FlexCenter ' 
+
+  const footerContainer = styles.footerContainer +
   ` mx-[--margin-mobile]  
     md:mx-[--margin-tablet]  
     lg:mx-[--margin-desktop]  
-    max-w-[--max-width-content]
-  `
+    max-w-[--max-width-content] `
 
     return (
-      <footer className={styles.footer}>
-        <div className={container}>
+      <footer className={footer}>
+        <div className={footerContainer}>
           {children}
         </div>
       </footer>
