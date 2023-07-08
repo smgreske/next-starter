@@ -20,7 +20,7 @@
       }
     ],
     "paths": {
-      "layout/*": ["./app/components/layout/*"],
+        "components/*": ["./app/components/*"],
       "utilities/*": ["./app/components/utilities/*"],
       "project/*": ["./app/components/project/*"],
       "functions/*": ["./app/functions/*"],

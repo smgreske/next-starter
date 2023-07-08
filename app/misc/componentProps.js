@@ -61,10 +61,6 @@ altText={'alt text'}
 <SocialLinks
 socialArray={socialArray}/>    
 
-<SvgComponent 
-styles={svgComponentStyles}
-attributes={svgAttributes}/>
-
 <ToggleSwitch
 styles={toggleSwitchStyles}
 mobileOnly={true}
