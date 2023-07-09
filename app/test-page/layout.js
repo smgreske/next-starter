@@ -1,29 +1,8 @@
-import 'app/global.css'
-import { Poppins, Space_Grotesk } from 'next/font/google'
-
 import Link from 'next/link'
 
+import { fontPrimary, fontSecondary } from 'app/layout'
 import { Footer, Header, Navigation, SocialLinks } from 'components/LayoutComponents'
-
-import ToggleSwitch from 'utilities/ToggleSwitch'
-
-export const fontPrimary = Poppins({ 
-  subsets: ['latin'],
-  weight: ['400','700'],
-  display: 'swap', 
-  variable: '--font-primary',
-})
-export const fontSecondary = Space_Grotesk({ 
-  subsets: ['latin'],
-  weight: ['400','700'],
-  display: 'swap', 
-  variable: '--font-secondary',
-})
-
-export const breakpoints = {
-  tablet:'650px',
-  desktop:'1000px'
-}
+import { ToggleSwitch } from 'components/UtilityComponents'
 
 export const metadata = {
   title: '*',
@@ -36,7 +15,7 @@ export default function TestLayout({ children }) {
    
   return (
     <html className={`${fontPrimary.variable} ${fontSecondary.variable}`} lang="en">          
-      <body > 
+      <body >
 
        {/* HEADER -------------------------------------------------------------------- */}
 
@@ -71,11 +50,11 @@ export default function TestLayout({ children }) {
                       { name: 'Link2', path: '/' },
                       { name: 'Link3', path: '/' }]}>
                     
-                          <Link 
-                          className={'ButtonBordered'}
-                          href='/'>
-                          Button
-                          </Link>
+                            <Link 
+                            className={'ButtonBordered'}
+                            href='/'>
+                            Button
+                            </Link>
 
                     </Navigation>
               </ToggleSwitch>

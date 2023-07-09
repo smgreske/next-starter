@@ -71,22 +71,3 @@ iconOff='off'>
 </>
 )
 }
-
-// STYLE OBJECTS //////////////////////////////////////
-
-
-import ImageOverlay from 'utilities/ImageOverlay'
-const imageOverlayStyles = {
-  container:`
-  `,
-  overlayContainer:`
-  `,
-  pictureContainer:`
-  `,
-}
-
-import PictureContainer from 'utilities/PictureContainer'
-const pictureContainerStyles = {
-  pictureContainer:`
-  `
-}

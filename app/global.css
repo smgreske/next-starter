@@ -3,186 +3,67 @@
 @tailwind utilities;
 
 @layer base {  
-    :root {
-        --max-width-content: 1110px;        
+  :root { 
+    --max-width-content: 1110px;        
+    --margin-mobile: 1rem;
+    --margin-tablet: 2rem;
+    --margin-desktop: 4rem;
 
-        --margin-mobile: 1rem;
-        --margin-tablet: 2rem;
-        --margin-desktop: 4rem;
+    --clr-1: #XXXXX;
+    --clr-2: #XXXXX;
+    --clr-3: #XXXXX;
+    --clr-4: #XXXXX;
+    --clr-5: #XXXXX;
+    --clr-6: #XXXXX;
+    --clr-7: #XXXXX;
+    --clr-8: #XXXXX;
+    --clr-9: #XXXXX;
 
-        --clr-bg-1: #XXXXX;
-        --clr-bg-2: #XXXXX;
-        --clr-bg-3: #XXXXX;
-        --clr-bg-4: #XXXXX;
-
-        --clr-1: #XXXXX;
-        --clr-2: #XXXXX;
-        --clr-3: #XXXXX;
-        --clr-4: #XXXXX;
-        --clr-5: #XXXXX;
-        --clr-6: #XXXXX;
-        --clr-7: #XXXXX;
-        --clr-8: #XXXXX;
-
-        --fw-1: XXXXX;
-        --fw-2: XXXXX;
-        --fw-3: XXXXX;
-
-/* ---------------------------------------------------- */
-
-        --fs-default: XXXXX;
-        --fs-default-md: XXXXX;
-        --fs-default-lg: XXXXX;
-
-        --fw-default: XXXXX;
-        --fw-default-h: XXXXX;
+  }
         
-/* -------------------------------------------------- */
+  /* body { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT scroll-smooth overflow-x-hidden ; font-family: var(--font-primary);}
+  header { @apply text-[COLOR] bg-[COLOR] py-SPACING;}
+  main { @apply text-[COLOR] bg-[COLOR];}  
+  footer { @apply text-[COLOR] bg-[COLOR] py-SPACING;} 
+
+  h1 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
+  h2 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
+  h3 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
+  h4 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
+  h5 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
+  h6 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
+
+  a { @apply hover:text-[COLOR];} */
+
+  picture { @apply block ;}
+
+  input:-webkit-autofill, input:-webkit-autofill:focus {
+    box-shadow: 0 0 0 100px var(--neutral-3) inset;
+    -webkit-text-fill-color: var(--neutral-1);
+  }
 }
-        
-    body {
-        scroll-behavior: smooth;
-        overflow-x: hidden;
-        font-family: var(--font-primary);
-        font-size: var(--fs-default);
-        font-weight: var(--fw-default);
-        @apply md:text-[--fs-default-md] lg:text-[--fs-default-lg];
-    }
-
-    header {
-        color: XXXXX;
-        background-color: XXXXX;
-    }
-    main {
-        color: XXXXX;
-        background-color: XXXXX;
-    }
-    footer {
-        color: XXXXX;
-        background-color: XXXXX;
-    }
-    h1 {
-        color: XXXXX;
-        font-family: var(--font-secondary);
-        font-size: XXXXX;
-        @apply 
-            md:text-[XXXXX]  
-            lg:text-[XXXXX]
-        ;
-    }
-    h2 {
-        color: XXXXX;
-        font-family: var(--font-secondary);
-        font-size: XXXXX;
-        @apply 
-            md:text-[XXXXX]  
-            lg:text-[XXXXX]
-        ;
-    }
-    h3 {
-        color: XXXXX;
-        font-family: var(--font-secondary);
-        font-size: XXXXX;
-        @apply 
-            md:text-[XXXXX]  
-            lg:text-[XXXXX]
-        ;
-    }
-    h4 {
-        color: XXXXX;
-        font-family: var(--font-secondary);
-        font-size: XXXXX; 
-        @apply 
-            md:text-[XXXXX]  
-            lg:text-[XXXXX]
-        ;
-    }
-    a {
-        @apply hover:text-[XXXXX];
-    }
-
-/* -------------------------------------------- */
-
-    picture {
-        display: block;
-    }    
-    input:-webkit-autofill, input:-webkit-autofill:focus {
-        box-shadow: 0 0 0 100px var(--neutral-3) inset;
-        -webkit-text-fill-color: var(--neutral-1);
-    }
-}
-
-/* ---------------------------------------------- */
 
 @layer components {
-    .ButtonBordered {
-        color: var(--color-2);
-        background-color: var(--neutral-1);
-        border: 1px solid var(--color-2);
-        border-radius: 50px;
-        padding: .3rem 1rem;
-    }
-        
-    .ButtonBordered:hover {
-        background-color: var(--color-2);
-        color: var(--neutral-1);
-    }
-    
-    .HoverStyle1 {
-        transform: scale(1.1);
-        transition: all .1s ease-in-out;
-        color: var(--neutral-2);
-        fill: var(--neutral-2);
-    }
-    
-    .LinkStyle1 {
-        text-transform: uppercase;
-        border-bottom: 2px solid var(--primary);
-    }
-}
-    
-/* ----------------------------------------------- */
 
-@layer utilities {
+  .ExtendBackground {
+    box-shadow: 0 0 0 100vmax var(--neutral-3);
+    clip-path: inset(0 -100vmax); }
+  .FixedToAutoMargin { @apply mx-auto ;
+    width: min(var(--max-width-body), 100% - calc(var(--margin-desktop) * 2));} 
 
-    .FixedHeader {
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
+  .FixedHeader { @apply fixed top-0 w-full ;}
+  .FlexCenter { @apply flex justify-center items-center ;}
+  .FlexBetween { @apply flex justify-between items-center ;}
+  .SplitCenter { @apply grid grid-cols-1 place-items-center md:grid-cols-2 ;}
 
-    .ExtendBackground {
-        box-shadow: 0 0 0 100vmax var(--neutral-3);
-        clip-path: inset(0 -100vmax);
-    }
-    
-    .FixedToAutoMargin {
-        width: min(var(--max-width-body), 100% - calc(var(--margin-desktop) * 2));
-        margin-inline: auto;
-    }
-    .FlexCenter {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .FlexBetween {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .SplitCenter {
-        
-        display: grid;
-        grid-template-columns: 1fr;
-        place-items: center;
-        @apply md:grid-cols-2;
-    }
+
+  .OverlayParent { @apply relative w-fit overflow-hidden ;}
+  .OverlayChild { @apply absolute inset-0 opacity-0 bg-black hover:opacity-60             hover:transition-opacity ;}
       
     /* TOGGLE SWITCH */
-    
+
     #input:checked ~ #off {
-        display: none;   
+      display: none;   
     }
     #input:checked ~ #on {   
         display: contents;
@@ -210,12 +91,3 @@
     
     }
 }
-
-
-
-
-
-
-
-
-
