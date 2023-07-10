@@ -14,15 +14,6 @@ fixed={false}>
   *
 </Header>
 
-<ImageOverlay
-style={stylesImageOverlay}
-imgMobile={imgMobile} 
-imgTablet={imgTablet}
-imgDesktop={imgDesktop}
-altText={'alt text'}>  
-  *
-</ImageOverlay>
-
 <InputEmail 
 styles={stylesInput}
 name=''      

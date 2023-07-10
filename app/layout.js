@@ -1,15 +1,20 @@
 import 'app/global.css'
-import { Poppins, Space_Grotesk } from 'next/font/google'
+import { XXXXX, XXXXX } from 'next/font/google'
 
-export const fontPrimary = Poppins({ 
+import Link from 'next/link'
+
+import { Footer, Header, Navigation, SocialLinks } from 'components/LayoutComponents'
+import { PictureContainer, ToggleSwitch } from 'components/UtilityComponents'
+
+export const fontPrimary = XXXXX({ 
   subsets: ['latin'],
-  weight: ['400','700'],
+  weight: ['XXXXX'],
   display: 'swap', 
   variable: '--font-primary',
 })
-export const fontSecondary = Space_Grotesk({ 
+export const fontSecondary = XXXXX({ 
   subsets: ['latin'],
-  weight: ['400','700'],
+  weight: ['XXXXX'],
   display: 'swap', 
   variable: '--font-secondary',
 })
@@ -19,13 +24,79 @@ export const breakpoints = {
   desktop:'1000px'
 }
 
-export default function RootLayout({ children }) {
+export const metadata = {
+  title: '*',
+  description: 'description',
+}
 
-return (
-  <html lang="en">          
-    <body > 
-      {children}
+/// SVG ///////////////////////////////////////////////////////////////////
+
+const mainLogoSvgBody = XXXXX
+
+////////////////////////////////////////////////////////////////////////////////
+export default function RootLayout({ children }) {
+///////////////////////////////////////////////////////////////////////////////
+ 
+  return (
+    <html className={`${fontPrimary.variable} ${fontSecondary.variable}`} lang="en">          
+      <body > 
+
+       {/* HEADER //////////////////////////////////////// */}
+
+        <Header styles={{
+        header:` `,
+        headerContainer:` ` }}>             
+            <Link
+            className=' w-XXXXX' 
+            href='/test-page'>
+              XXXXX
+            </Link>
+            
+            {/* Navigation ------------------------------------------ */}
+            
+            <ToggleSwitch 
+            mobileOnly={true}
+            iconOn='on'
+            iconOff='off'>             
+                <Navigation styles={{
+                navContainer:` flex flex-col md:flex-row items-center gap-XXXXX  `,
+                navLinksContainer:` flex flex-col md:flex-row gap-XXXXX `,
+                navLink:`  ` }}
+                navLinkArray={[
+                  { name: 'Link1', path: '/' },
+                  { name: 'Link2', path: '/' },
+                  { name: 'Link3', path: '/' }]}>                                      
+                </Navigation>
+            </ToggleSwitch>
+        </Header>
+  
+        {children}
+
+        {/* FOOTER ///////////////////////////////////////////////// */}
+  
+        <Footer styles={{
+        footer:`  `,
+        footerContainer:`  ` }}>
+            <Link 
+            href='/'>
+                <div className='  w-XXXXX  '>
+                {mainLogoSvgFooter}
+                </div>
+            </Link>
+
+            {/* Social Links */}
+
+            <SocialLinks styles={{
+            socialNav:` flex gap-XXXXX `,
+            socialSvg:` w-XXXXX fill-XXXXX hover:fill-XXXXX ` }}
+            socialArray={[
+              { name: 'XXXXX', path: '/' },
+              { name: 'XXXXX', path: '/' },
+              { name: 'XXXXX', path: '/' }]}
+            />
+
+        </Footer>
     </body>
   </html>
-    )
-}
+      )
+  }

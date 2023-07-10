@@ -5,9 +5,9 @@
 @layer base {  
   :root { 
     --max-width-content: 1110px;        
-    --margin-mobile: 1rem;
-    --margin-tablet: 2rem;
-    --margin-desktop: 4rem;
+    --margin-mobile: XXXXX;
+    --margin-tablet: XXXXX;
+    --margin-desktop: XXXXX;
 
     --clr-1: #XXXXX;
     --clr-2: #XXXXX;
@@ -21,21 +21,58 @@
 
   }
         
-  /* body { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT scroll-smooth overflow-x-hidden ; font-family: var(--font-primary);}
-  header { @apply text-[COLOR] bg-[COLOR] py-SPACING;}
-  main { @apply text-[COLOR] bg-[COLOR];}  
-  footer { @apply text-[COLOR] bg-[COLOR] py-SPACING;} 
+  body { @apply font-WEIGHT scroll-smooth overflow-x-hidden
+    text-[COLOR]
+    bg-[COLOR]
+    text-SIZE 
+    md:text-SIZE 
+    lg:text-SIZE; 
+    font-family: var(--font-primary);}
 
-  h1 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
-  h2 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
-  h3 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
-  h4 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
-  h5 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
-  h6 { @apply text-[COLOR] text-[SIZE] md:text-[SIZE] lg:text-[SIZE] font-WEIGHT ;}
+  header { @apply flex justify-between items-center w-full 
+    text-[COLOR] 
+    bg-[COLOR] 
+    py-SPACING;}
 
-  a { @apply hover:text-[COLOR];} */
+  footer { @apply flex justify-between items-center w-full
+    text-[COLOR] 
+    bg-[COLOR] 
+    py-SPACING;} 
 
-  picture { @apply block ;}
+  h1 { @apply 
+    text-[COLOR] 
+    text-SIZE 
+    md:text-SIZE 
+    lg:text-SIZE 
+    font-WEIGHT;
+    font-family: var(--font-primary)}
+
+  h2{ @apply 
+    text-[COLOR] 
+    text-SIZE 
+    md:text-SIZE 
+    lg:text-SIZE 
+    font-WEIGHT;}
+
+  h3 { @apply 
+    text-[COLOR] 
+    text-SIZE 
+    md:text-SIZE 
+    lg:text-SIZE 
+    font-WEIGHT;}
+    
+  h4 { @apply 
+    text-[COLOR] 
+    text-SIZE 
+    md:text-SIZE 
+    lg:text-SIZE 
+    font-WEIGHT;}
+
+  a { @apply 
+    hover:text-[COLOR];}
+
+  picture { @apply 
+    block ;}
 
   input:-webkit-autofill, input:-webkit-autofill:focus {
     box-shadow: 0 0 0 100px var(--neutral-3) inset;
