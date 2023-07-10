@@ -7,7 +7,7 @@ export default function Home() {
           </a>
           <br/>
           <br/>
-          <a href='/project'>
+          <a href='/project-page'>
             Project
           </a>
         </main>

@@ -39,7 +39,7 @@
 
   input:-webkit-autofill, input:-webkit-autofill:focus {
     box-shadow: 0 0 0 100px var(--neutral-3) inset;
-    -webkit-text-fill-color: var(--neutral-1);
+    -webkit-text-fill-color: var(--neutral-1);  
   }
 }
 
@@ -62,15 +62,16 @@
       
     /* TOGGLE SWITCH */
 
-    #input:checked ~ #off {
+    /* #input:checked ~ #off {
       display: none;   
     }
     #input:checked ~ #on {   
         display: contents;
-    }
+    } */
     
     @media (max-width: 650px) {
         #label:has(#input) + #childContainer {
+          
         
             background-color: var(--neutral-3);
             display: grid;

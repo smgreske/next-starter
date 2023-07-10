@@ -21,14 +21,14 @@ export function ToggleSwitch({ styles, mobileOnly, iconOn, iconOff, children }) 
 
     return (
       <div >
-        <label id='label' className={ 
-          (styles && styles.label) + 
-          (mobileOnly && ` md:hidden `) +
-          ` cursor-pointer `}
-        >
-          <input id='input' className={' hidden '} type="checkbox"/>
-          <i id='off' >{iconOff}</i>
-          <i id='on' className={' hidden '}>{iconOn}</i>
+        <label id='label' 
+          className={ 
+            (styles && styles.label) + 
+            (mobileOnly && ` md:hidden `) +
+            ` cursor-pointer `}>
+          <input id='input' className={' peer hidden '} type="checkbox"/>
+          <i className={' peer-checked:hidden '} >{iconOff}</i>
+          <i className={' peer-checked:visible hidden '}>{iconOn}</i>
         </label>
         <div id='childContainer'>
           {children}

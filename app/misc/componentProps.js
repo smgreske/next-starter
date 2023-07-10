@@ -4,7 +4,7 @@ return (
 
 <Footer // 
 styles={stylesFooter} 
-fixed={false}>
+>
   *
 </Footer>
 
