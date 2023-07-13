@@ -3,7 +3,7 @@
 export function PictureContainer({ styles, altText, breakpoints, imgMobile, imgTablet, imgDesktop, }) {
 
   return (
-    <picture className={ styles && styles.pictureContainer +
+    <picture className={ styles && styles.picture +
       ` overflow-hidden `}>
       {imgDesktop && <source 
         srcSet={imgDesktop.src}
@@ -11,7 +11,7 @@ export function PictureContainer({ styles, altText, breakpoints, imgMobile, imgT
       {imgTablet && <source
         srcSet={imgTablet.src}
         media={`(min-width: ${breakpoints.tablet})`}/>}
-      <img src={imgMobile.src} alt={altText}/>   
+      <img className={ styles && styles.image} src={imgMobile.src} alt={altText}/>   
     </picture>
 )
 }

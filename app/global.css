@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 @layer base {  
-  :root { 
-    --max-width-content: 1110px;        
-    --margin-mobile: XXXXX;
-    --margin-tablet: XXXXX;
-    --margin-desktop: XXXXX;
+  :root {    
 
     --clr-1: #XXXXX;
     --clr-2: #XXXXX;
@@ -18,58 +14,31 @@
     --clr-7: #XXXXX;
     --clr-8: #XXXXX;
     --clr-9: #XXXXX;
+    --clr-0: #XXXXX;
 
   }
         
-  body { @apply font-WEIGHT scroll-smooth overflow-x-hidden
-    text-[COLOR]
-    bg-[COLOR]
+  body { @apply scroll-smooth overflow-x-hidden
+    text-[--clr-XXXXX]
+    bg-[--clr-XXXXX]
     text-SIZE 
     md:text-SIZE 
-    lg:text-SIZE; 
-    font-family: var(--font-primary);}
-
-  header { @apply flex justify-between items-center w-full 
-    text-[COLOR] 
-    bg-[COLOR] 
-    py-SPACING;}
-
-  footer { @apply flex justify-between items-center w-full
-    text-[COLOR] 
-    bg-[COLOR] 
-    py-SPACING;} 
-
-  h1 { @apply 
-    text-[COLOR] 
-    text-SIZE 
-    md:text-SIZE 
-    lg:text-SIZE 
+    lg:text-SIZE
     font-WEIGHT;
-    font-family: var(--font-primary)}
+    font-family: var(--font-primary);
+  }
 
-  h2{ @apply 
-    text-[COLOR] 
-    text-SIZE 
-    md:text-SIZE 
-    lg:text-SIZE 
-    font-WEIGHT;}
-
-  h3 { @apply 
-    text-[COLOR] 
-    text-SIZE 
-    md:text-SIZE 
-    lg:text-SIZE 
-    font-WEIGHT;}
-    
-  h4 { @apply 
-    text-[COLOR] 
-    text-SIZE 
-    md:text-SIZE 
-    lg:text-SIZE 
-    font-WEIGHT;}
-
-  a { @apply 
-    hover:text-[COLOR];}
+  header, main, footer { @apply flex justify-center
+    mx-[XXXXX] 
+    md:mx-[XXXXX] 
+    lg:mx-[XXXXX];
+  }
+  
+  h1, h2, h3, h4, h5, h6 { @apply
+    text-[--clr-XXXXX]
+    font-WEIGHT;
+    font-family: var(--font-secondary);
+  }
 
   picture { @apply 
     block ;}
@@ -82,16 +51,25 @@
 
 @layer components {
 
+  .CenterAbsolute { @apply left-1/2 -translate-y-1/2
+  }
   .ExtendBackground {
     box-shadow: 0 0 0 100vmax var(--neutral-3);
-    clip-path: inset(0 -100vmax); }
+    clip-path: inset(0 -100vmax); 
+  }
   .FixedToAutoMargin { @apply mx-auto ;
-    width: min(var(--max-width-body), 100% - calc(var(--margin-desktop) * 2));} 
-
-  .FixedHeader { @apply fixed top-0 w-full ;}
-  .FlexCenter { @apply flex justify-center items-center ;}
-  .FlexBetween { @apply flex justify-between items-center ;}
-  .SplitCenter { @apply grid grid-cols-1 place-items-center md:grid-cols-2 ;}
+    width: min(var(--max-width-body), 100% - calc(var(--margin-desktop) * 2));
+  } 
+  .FixedHeader { @apply fixed top-0 w-full ;
+  }
+  .FlexBetween { @apply flex justify-between ;
+  }
+  .FlexCol { @apply flex flex-col;
+  }
+  .FlexCenter { @apply flex justify-center ;
+  }
+  .SplitCenter { @apply grid grid-cols-1 place-items-center md:grid-cols-2 ;
+  }
 
 
   .OverlayParent { @apply relative w-fit overflow-hidden ;}

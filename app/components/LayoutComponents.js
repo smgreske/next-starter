@@ -3,12 +3,8 @@ import Link from 'next/link'
 export function Footer({ styles, children }) {
 
     return (
-      <footer className={styles.footer + ` FlexCenter `}>
-        <div className={styles.footerContainer +
-        ` mx-[--margin-mobile]  
-          md:mx-[--margin-tablet]  
-          lg:mx-[--margin-desktop]  
-          max-w-[--max-width-content] `}>
+      <footer className={styles.footer}>
+        <div className={styles.footerContainer}>
           {children}
         </div>
       </footer>
@@ -18,12 +14,8 @@ export function Footer({ styles, children }) {
 export function Header({ styles, children }) {
     
   return (
-    <header className={styles.header + ` FlexCenter `}>
-      <div className={styles.headerContainer +
-      ` mx-[--margin-mobile]  
-        md:mx-[--margin-tablet]  
-        lg:mx-[--margin-desktop]  
-        max-w-[--max-width-content] `}>       
+    <header className={styles.header}>
+      <div className={styles.headerContainer}>       
         {children}
       </div>
     </header>

@@ -2,63 +2,86 @@ function componentProps() {
 return (
 <>
 
-<Footer // 
-styles={stylesFooter} 
->
-  *
+<Footer styles={{
+footer:' ',
+footerContainer:' mx-[XXXXX] md:mx-[XXXXX] lg:mx-[XXXXX] max-w-[XXXXX] '}}> 
+  XXXXX
 </Footer>
 
-<Header 
-styles={stylesHeader}
-fixed={false}>
-  *
+
+<Header styles={{
+header:' ',
+headerContainer:' mx-[XXXXX] md:mx-[XXXXX] lg:mx-[XXXXX] max-w-[XXXXX] '}}>
+  XXXXX
 </Header>
 
-<InputEmail 
-styles={stylesInput}
-name=''      
-required={true}
-emptyMessage=''
-invalidMessage=''
-register={register}  formState={formState}
-/>
+<Main styles={{
+main:`  `,
+mainContainer:' mx-[XXXXX] md:mx-[XXXXX] lg:mx-[XXXXX] max-w-[XXXXX] '}}>
+  xxxxx
+</Main>
 
-<InputText 
-styles={stylesInput}
-name=''
-required={true}
-emptyMessage=''
-validatorType=''
-validatorValue={1}
-invalidMessage=''             
-register={register}  formState={formState}
-/>
 
-<Navigation 
-styles={navigationStyles}
-navLinkArray={navLinkArray}>
-    *
+<InputEmail styles={{
+input:' ',
+error:' '}}
+name='XXXXX'      
+required={XXXXX}
+emptyMessage='XXXXX'
+invalidMessage='XXXXX'
+register={register}  formState={formState}/>
+
+
+<InputText styles={{
+input:' ',
+error:' '}}
+name='XXXXX'
+required={XXXXX}
+emptyMessage='XXXXX'
+validatorType='XXXXX'
+validatorValue={XXXXX}
+invalidMessage='XXXXX'             
+register={register}  formState={formState}/>
+
+
+<Navigation styles={{
+navContainer:'flex flex-col md:flex-row items-center gap-[XXXXX] ',
+navLinksContainer:'flex flex-col md:flex-row gap-[XXXXX] ',
+navLink:' '}}
+navLinkArray={[
+  { name: 'XXXXX', path: '/' },
+  { name: 'XXXXX', path: '/' },
+  { name: 'XXXXX', path: '/' }]}>
+    XXXXX
 </Navigation>
 
-<PictureContainer 
-styles={stylesPictureContainer}
-imgMobile={imgMobile} 
-imgTablet={imgTablet}
-imgDesktop={imgDesktop}
-altText={'alt text'} 
-/>
+
+<PictureContainer styles={{
+picture:' ',
+image:' '}}
+breakpoints={breakpoints}
+imgMobile={XXXXX} 
+imgTablet={XXXXX}
+imgDesktop={XXXXX}
+altText={'XXXXX'} />
 
 
 <SocialLinks
-socialArray={socialArray}/>    
+socialArray={[
+  { name: 'XXXXX', path: '/' },
+  { name: 'XXXXX', path: '/' },
+  { name: 'XXXXX', path: '/' }]}/>
+
 
 <ToggleSwitch
 styles={toggleSwitchStyles}
 mobileOnly={true}
 iconOn='on'
 iconOff='off'>
-  *
+  XXXXX
 </ToggleSwitch>
+
+
 </>
 )
 }

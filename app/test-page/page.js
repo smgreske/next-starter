@@ -1,8 +1,7 @@
-import { breakpoints } from 'app/layout'
-
 import { Main }  from 'components/PageComponents'
 import { PictureContainer } from 'components/UtilityComponents'
 
+import { breakpoints } from 'app/layout'
 import imgMobile from 'images/image-mobile.jpg'
 import imgTablet from 'images/image-tablet.jpg'
 import imgDesktop from 'images/image-desktop.jpg'

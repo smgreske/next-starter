@@ -1,10 +1,9 @@
-import 'app/global.css'
-import { XXXXX, XXXXX } from 'next/font/google'
-
 import Link from 'next/link'
-
 import { Footer, Header, Navigation, SocialLinks } from 'components/LayoutComponents'
 import { PictureContainer, ToggleSwitch } from 'components/UtilityComponents'
+
+import 'app/global.css'
+import { XXXXX, XXXXX } from 'next/font/google'
 
 export const fontPrimary = XXXXX({ 
   subsets: ['latin'],
@@ -44,10 +43,10 @@ export default function RootLayout({ children }) {
        {/* HEADER //////////////////////////////////////// */}
 
         <Header styles={{
-        header:` `,
-        headerContainer:` ` }}>             
-            <Link
-            className=' w-XXXXX' 
+        header:`text-[--clr-[XXXXX] bg-[--clr-[XXXXX] `,
+        headerContainer:` py-[XXXXX] ` }}>
+
+            <Link className=' w-[XXXXX]' 
             href='/test-page'>
               XXXXX
             </Link>
@@ -57,16 +56,18 @@ export default function RootLayout({ children }) {
             <ToggleSwitch 
             mobileOnly={true}
             iconOn='on'
-            iconOff='off'>             
+            iconOff='off'> 
+
                 <Navigation styles={{
-                navContainer:` flex flex-col md:flex-row items-center gap-XXXXX  `,
-                navLinksContainer:` flex flex-col md:flex-row gap-XXXXX `,
-                navLink:`  ` }}
+                navContainer:`flex flex-col md:flex-row items-center gap-[XXXXX] `,
+                navLinksContainer:`flex flex-col md:flex-row gap-[XXXXX] `,
+                navLink:` `}}
                 navLinkArray={[
                   { name: 'Link1', path: '/' },
                   { name: 'Link2', path: '/' },
                   { name: 'Link3', path: '/' }]}>                                      
                 </Navigation>
+                
             </ToggleSwitch>
         </Header>
   
@@ -75,20 +76,19 @@ export default function RootLayout({ children }) {
         {/* FOOTER ///////////////////////////////////////////////// */}
   
         <Footer styles={{
-        footer:`  `,
-        footerContainer:`  ` }}>
-            <Link 
+        footer:`text-[--clr-[XXXXX] bg-[--clr-[XXXXX] `,
+        footerContainer:` `}}>
+
+            <Link className='w-[XXXXX] '
             href='/'>
-                <div className='  w-XXXXX  '>
-                {mainLogoSvgFooter}
-                </div>
+              {mainLogoSvgFooter}
             </Link>
 
             {/* Social Links */}
 
             <SocialLinks styles={{
-            socialNav:` flex gap-XXXXX `,
-            socialSvg:` w-XXXXX fill-XXXXX hover:fill-XXXXX ` }}
+            socialNav:`flex gap-[XXXXX] `,
+            socialSvg:`w-[XXXXX] fill-[XXXXX] hover:fill-[XXXXX] ` }}
             socialArray={[
               { name: 'XXXXX', path: '/' },
               { name: 'XXXXX', path: '/' },

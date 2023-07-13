@@ -7,7 +7,7 @@ export function InputText({ name, styles,
     required && (validationObject.required = {value:true, message: emptyMessage})
     validatorType && (validationObject[validatorType] = {value:validatorValue, message:invalidMessage})
 
-    const errorName = styles.error + 
+    const error = styles.error + 
       (formState.errors[name] ? ' opacity-1 transition-opacity' : ' opacity-0 ')
 
     return (
@@ -15,7 +15,7 @@ export function InputText({ name, styles,
         <input className={styles.input}               
           placeholder={name}  
           {...register(name, validationObject)}/>
-        <p className={errorName}>{formState.errors[name] ? formState.errors[name].message : 'hidden' }</p>
+        <p className={error}>{formState.errors[name] ? formState.errors[name].message : 'hidden' }</p>
       </div>
     )
 }
@@ -32,7 +32,7 @@ export function InputEmail({ name, styles,
       message:invalidMessage
     }
 
-    const errorName = styles.error + 
+    const error = styles.error + 
       (formState.errors[name] ? ' opacity-1 transition-opacity' : ' opacity-0 ')
 
     return (
@@ -40,7 +40,7 @@ export function InputEmail({ name, styles,
         <input className={styles.input}           
           placeholder={name}  
           {...register(name, validationObject)}/>
-        <p className={errorName}>{formState.errors[name] ? formState.errors[name].message : 'hidden' }</p>
+        <p className={error}>{formState.errors[name] ? formState.errors[name].message : 'hidden' }</p>
       </div>
     )
 }
