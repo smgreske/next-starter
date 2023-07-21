@@ -1,45 +1,43 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {  
   :root {    
-    --clr-1: #XXXXX;
-    --clr-2: #XXXXX;
-    --clr-3: #XXXXX;
-    --clr-4: #XXXXX;
-    --clr-5: #XXXXX;
-    --clr-6: #XXXXX;
-    --clr-7: #XXXXX;
-    --clr-8: #XXXXX;
-    --clr-9: #XXXXX;
-  }     
+    --clr-1: rgb(255, 255, 255);
+    --clr-2: rgb(200, 200, 255);
+    --clr-3: rgb(150, 150, 255);
+    --clr-4: rgb(100, 100, 255);
+    --clr-5: rgb(50, 50, 255);
+    --clr-6: rgb(0, 0, 255);
+    --clr-7: rgb(0, 0, 0);
+  }
 
   body { @apply scroll-smooth overflow-x-hidden
-    text-[--clr-XXXXX]
-    bg-[--clr-XXXXX]
-    text-XXXXX 
-    md:text-XXXXX 
-    lg:text-XXXXX
-    font-XXXXX;
+    text-[--clr-6]
+    bg-[--clr-3]
+    text-16 
+    md:text-18 
+    lg:text-20
+    font-medium;
     font-family: var(--font-primary);
   }
 
   header, main, footer { 
-    @apply flex justify-center 
+    @apply flex justify-center;
   }
 
   header > div, main > div, footer > div { 
-    @apply w-full 
-    max-w-[XXXXX]
-    mx-[XXXXX] 
-    md:mx-[XXXXX] 
-    lg:mx-[XXXXX];
+    @apply w-full
+    max-w-[1100px]
+    mx-[1rem] 
+    md:mx-[2rem] 
+    lg:mx-[4rem];
   }
 
   h1, h2, h3, h4, h5, h6 { @apply
-    text-[--clr-XXXXX]
-    font-XXXXX;
+    text-[--clr-6]
+    font-bold;
     font-family: var(--font-secondary);
   }
   picture { @apply 
@@ -70,4 +68,4 @@
       translate: 0;
       transition: translate .1s ease-out;
     }  
-  } */
+  }
