@@ -13,7 +13,11 @@
     --clr-7: rgb(0, 0, 0);
   }
 
-  body { @apply scroll-smooth overflow-x-hidden
+  html {
+    scroll-behavior: smooth !important;
+  }
+
+  body { @apply overflow-x-hidden
     text-[--clr-6]
     bg-[--clr-3]
     text-16 
@@ -23,11 +27,15 @@
     font-family: var(--font-primary);
   }
 
-  header, main, footer { 
+  header, 
+  main, 
+  footer { 
     @apply flex justify-center;
   }
 
-  header > div, main > div, footer > div { 
+  header > div, 
+  main > div, 
+  footer > div { 
     @apply w-full
     max-w-[1100px]
     mx-[1rem] 

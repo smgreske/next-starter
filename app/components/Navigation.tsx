@@ -20,7 +20,7 @@ export function Navigation({
       <div className={styles.navLinksContainer}>
         {navLinkArray &&
           navLinkArray.map((current: { name: string; path: string }) => (
-            <Link className={styles.navLink} href={current.path}>
+            <Link className={styles.navLink} href={current.path} key={current.name}>
               {current.name}
             </Link>
           ))}

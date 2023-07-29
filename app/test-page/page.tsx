@@ -72,7 +72,7 @@ export default function TestPage() {
             <h5>Heading 5</h5>
             <h6>Heading 6</h6>
             <p>Paragraph</p>
-            <a href="/">Anchor</a>
+            <a href="#">Anchor</a>
 
             {/* Split Container with Image and Centered Text */}
 
